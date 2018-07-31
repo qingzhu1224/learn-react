@@ -71,4 +71,4 @@ React
 
 >2.`不能直接修改state`, 例如： this.state.title = 'React';
 
->3.State的更新是异步的
+>3.State的更新是异步的![图片](https://github.com/qingzhu1224/learn-react/blob/master/imges/state.png)
