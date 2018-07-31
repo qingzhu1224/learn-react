@@ -12,14 +12,17 @@ React
 
 [具体参考](https://segmentfault.com/a/1190000004168886)
 
-1.挂载阶段
+>1.挂载阶段
     getDefaultProps\getIniteState\componentWillMount\render\compoentDidMount
-2.更新阶段
+
+>2.更新阶段
     componentWillRecieveProps\shouldCompoentUpdate\componentWillUpdate\render\compoentDidUpdate
-3.卸载阶段
+
+>3.卸载阶段
     componentWillUnMount
 
-1.挂载阶段有：`getDefaultProps`这个方法只会调用一次。返回来默认的属性值。`getInitialState`用来初始化每个实例的state。`componentWillMount`的该方法在首次渲染之前调用，也是在render方法调用之前修改state的最后一次机会。`render`创建一个虚拟DOM，标示组件的输出。对于一个组件来说，这个方法是必须的。`componentDidMount`该方法被调用时，已经渲染出真是的DOM了。一般用来调后台接口。   
+
+>4.1.挂载阶段有：`getDefaultProps`这个方法只会调用一次。返回来默认的属性值。`getInitialState`用来初始化每个实例的state。`componentWillMount`的该方法在首次渲染之前调用，也是在render方法调用之前修改state的最后一次机会。`render`创建一个虚拟DOM，标示组件的输出。对于一个组件来说，这个方法是必须的。`componentDidMount`该方法被调用时，已经渲染出真是的DOM了。一般用来调后台接口。   
 2.更新阶段：`componentWillReceiveProps`组件的props属性可以通过付组件来更改。在这里可以更新state,触发render方法重新渲染组件。`shouldComponentUpdate`如果确定组件的props或state的改变不需要重新渲染，可以返回false来阻止组件重新渲染。`componentWillUpdate`，在组件接收到新的props或state即将渲染前。此时不要更新props或state.`componentDidUpdate`表示更新之后，相当于compoentDIdMount，可以获得DOM.    
 3.卸载阶段：`componentWillUnmount`卸载销毁时执行，完成所有的清理和销毁工作。主要用于取消定时器或事件监听器。
 
@@ -27,9 +30,11 @@ React
 -----------------------
 
 [具体情况参考](https://juejin.im/post/5a155f906fb9a045284622b4)     
-1.setState不会立刻改变React组件中state的值    
-2.setState通过引发一次组件的更新过程来引发重新绘制    
-3.多次setState函数调用产生的效果会合并
+>1.setState不会立刻改变React组件中state的值    
+
+>2.setState通过引发一次组件的更新过程来引发重新绘制   
+
+>3.多次setState函数调用产生的效果会合并
 
 
 
@@ -74,3 +79,12 @@ React
 >3.State的更新是异步的![图片](https://github.com/qingzhu1224/learn-react/blob/master/imges/state.png)
 
 >4.如果state的类型是`不可变类型（数字，字符串，布尔值，null， undefined）`，直接给修改的状态赋一个新值就可以了。如果状态的类型是`数组`，使用`concat、slice、fliter或者扩展运算符`.如果是`普通对象`，使用`Object.assgin{}或者扩展运算符`.
+
+Immutable Data
+===================================
+
+>1.[参考](https://github.com/camsong/blog/issues/3)
+
+>2.Immutable实现原理是持久化数据结构，也就是使用旧数据创建新数据时，要保证旧数据同时可用且不可变。同时为了避免deepCopy把所有节点都复制一遍带来的性能损耗，使用了结构共享，即如果对象数中一个节点发生变化，只修改这个节点和受它影响的父节点，其他节点则进行共享。优点：`时间旅行`和`节省内存`
+
+
