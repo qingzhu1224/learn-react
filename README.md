@@ -63,4 +63,12 @@ React
 2.当导航切换特别快的时候，之前请求的数据出现了setState(…):Can only update a mounted or mounting component……的错误。出现这个问题时，这个主要是发生在异步处理的情况下，例如事件或者异步请求的情况     
 3.添加给DOM元素的监听事件，组件卸载时，手动清除。     
 4.表单校验问题      
-5.
+
+7.setState
+------------------------
+
+>1.[参考](https://www.jianshu.com/p/c6257cbef1b1)
+
+>2.`不能直接修改state`, 例如： this.state.title = 'React';
+
+>3.State的更新是异步的
