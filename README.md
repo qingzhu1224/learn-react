@@ -72,3 +72,5 @@ React
 >2.`不能直接修改state`, 例如： this.state.title = 'React';
 
 >3.State的更新是异步的![图片](https://github.com/qingzhu1224/learn-react/blob/master/imges/state.png)
+
+>4.如果state的类型是`不可变类型（数字，字符串，布尔值，null， undefined）`，直接给修改的状态赋一个新值就可以了。如果状态的类型是`数组`，使用`concat、slice、fliter或者扩展运算符`.如果是`普通对象`，使用`Object.assgin{}或者扩展运算符`.
