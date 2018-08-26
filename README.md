@@ -97,4 +97,10 @@ Immutable Data
 
 >3.两个虚拟dom,使用diff算法之后，会产生patchs，再更新dom
 
+>4.[参考](https://github.com/KieSun/My-wheels/tree/master/Virtual%20Dom)
 
+>5.Virtual Dom 算法的实现也就是以下三步
+
+* 通过 JS 来模拟创建 DOM 对象
+* 判断两个对象的差异
+* 渲染差异
