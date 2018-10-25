@@ -116,4 +116,6 @@ Immutable Data
 
 
 
+3.react 16新增的内容 [参考](https://zhuanlan.zhihu.com/p/34604934)
+
 
