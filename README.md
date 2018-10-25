@@ -69,7 +69,7 @@ React
 *  添加给DOM元素的监听事件，组件卸载时，手动清除。     
 *  表单校验问题      
 
-7.setState
+7.setState [参考](https://juejin.im/post/5b45c57c51882519790c7441)
 ------------------------
 
 >1.[参考](https://www.jianshu.com/p/c6257cbef1b1)
@@ -78,7 +78,7 @@ React
 
 >3.State的更新是异步的![图片](https://github.com/qingzhu1224/learn-react/blob/master/imges/state.png)
 
->4.如果state的类型是`不可变类型（数字，字符串，布尔值，null， undefined）`，直接给修改的状态赋一个新值就可以了。如果状态的类型是`数组`，使用`concat、slice、fliter或者扩展运算符`.如果是`普通对象`，使用`Object.assgin{}或者扩展运算符`.
+>4.如果state的类型是`不可变类型（数字，字符串，布尔值，null， undefined）`，直接给修改的状态赋一个新值就可以了。如果状态的类型是`数组`，使用`concat、slice、filter或者扩展运算符`.如果是`普通对象`，使用`Object.assgin{}或者扩展运算符`.
 
 Immutable Data
 ===================================
@@ -103,4 +103,17 @@ Immutable Data
 
 * 通过 JS 来模拟创建 DOM 对象
 * 判断两个对象的差异
-* 渲染差异
+* 渲染差异url
+
+其他
+=====================
+
+1.react的数据载体
+
+2.后台请求接口事放在ComponentWillMount还是ComponentDidMount中？ [参考](http://react-china.org/t/react-componentdidmount-componentwillmount/15144/8)
+
+- 一般异步加载数据放在ComponentDidMount中，因为componentWillMount里面状态改变并不会触发再次更新，而componentDidMount里面state的变化会触发更新，所以对于请求远程数据的，尽量放在componentDidMount，这样状态变化后，界面也会更新，而放在componentWillMount，有可能界面不会更新
+
+
+
+
